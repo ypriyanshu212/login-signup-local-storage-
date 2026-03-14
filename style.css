@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+.hignlight {
+    color: orangered;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.548);
+    color: white;
+    height: 6rem;
+
+}
+
+.container {
+    width: 100%;
+
+}
+
+.logo h1 {
+    font-size: 50px;
+    font-weight: 900;
+    margin-left: 50%;
+    cursor: pointer;
+}
+.nav-items ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 70px;
+    font-size: xx-large;
+}
+
+ul li>a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: transform 5ms ease-out;
+}
+
+ul li>a:hover::after {
+    content: '';
+    background-color: red;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    height: 1rem;
+    width: 100%;
+    transform: scale(0.9);
+}
+
+.btn-login {
+    width: 15rem;
+    height: 5rem;
+    font-size: x-large;
+    background-color: orangered;
+    color: black;
+    border: none;
+    border-radius: 70px;
+    margin-right: 6rem;
+    transition: transform 1ms ease-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.btn-login a{
+    text-decoration: none;
+    color: black;
+}
+.btn-login > a:hover{
+    transform: scale(0.9);
+}
+
+.btn-login::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: greenyellow;
+    color: white;
+    transition: 1.0s;
+    border-radius: 70px;
+    z-index: -1;
+}
+
+.btn-login:hover::before {
+    width: 100%;
+}
+
+/* hero  */
+.hero {
+    position: relative;
+    height: 90vh;
+    width: 100%;
+}
+
+.hero-img {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    margin: 40px auto;
+    /* border: 2px solid red; */
+}
+
+.hero-img img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 80px;
+    transition: transform 5ms ease-out;
+}
+
+.hero-img:hover {
+    transform: scale(1.01);
+}
+
+/* overlay  */
+/* .hero img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 80px;
+} */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.486);
+    border-radius: 80px;
+    z-index: 1;
+}
+
+/* text  */
+.hero-txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 900;
+    font-family: monospace;
+    text-align: center;
+    z-index: 2;
+}
+.hero-txt h2{
+    font-size: 5.6rem;
+}
+
+/* about section  */
+.about h2 {
+    text-align: center;
+    margin: 1rem auto;
+    /* margin: 0 auto 8rem auto; */
+    font-size: 5.5rem;
+    position: relative;
+    width: max-content;
+}
+
+.about h2::after {
+    content: '';
+    background-color: orangered;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    height: 0.09em;
+    width: 100%;
+    transform: scale(0.9);
+}
+.about h3 {
+    text-align: center;
+}
+
+.about p {
+    margin: 2% 10%;
+    font-size: xx-large;
+    font-weight: 100;
+}
+
+/* contact section  */
+.contact {
+    min-height: 100vh;
+    min-width: 100%;
+    margin-bottom: 5rem;
+}
+
+.contact h2 {
+    text-align: center;
+    margin: 10rem auto;
+    /* margin: 0 auto 8rem auto; */
+    font-size: 5.5rem;
+    position: relative;
+    width: max-content;
+}
+
+.contact h2::after {
+    content: '';
+    background-color: orangered;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    height: 0.09em;
+    width: 100%;
+    transform: scale(0.9);
+}
+
+.contact-layout {
+    display: flex;
+}
+
+.contact-img {
+    width: 40%;
+    height: 20%;
+}
+
+.contact-img img {
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    margin: 0 20%;
+}
+
+.contact-form {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 70%;
+    margin-left: 290px;
+    border-radius: 50px;
+    /* background-color: rgba(0, 0, 0, 0.842); */
+    /* background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%); */
+    /* https://grabient.com/HQBgrAzANKAsAcMT0cAjLAnDNYDsOsATDEUSKWicGWlBMHmtA3kS8AGybShgVpQIAUIoggA?style=linearSwatches */
+
+    background: linear-gradient(90deg, #121216 0.000%, #121216 7.692%, #16171a calc(7.692% + 1px), #16171a 15.385%, #1a1b1f calc(15.385% + 1px), #1a1b1f 23.077%, #1f2023 calc(23.077% + 1px), #1f2023 30.769%, #232427 calc(30.769% + 1px), #232427 38.462%, #27282b calc(38.462% + 1px), #27282b 46.154%, #2b2c2f calc(46.154% + 1px), #2b2c2f 53.846%, #2f3033 calc(53.846% + 1px), #2f3033 61.538%, #323337 calc(61.538% + 1px), #323337 69.231%, #36373a calc(69.231% + 1px), #36373a 76.923%, #38393d calc(76.923% + 1px), #38393d 84.615%, #3b3c40 calc(84.615% + 1px), #3b3c40 92.308%, #3d3e42 calc(92.308% + 1px) 100.000%);
+}
+
+form input {
+    border: 2px solid black;
+    width: 70%;
+    height: 10%;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 1.5rem;
+    padding-left: 2.5rem;
+}
+
+.contact-btn {
+    width: 70%;
+    height: 10%;
+    background-color: white;
+    border: 2px solid white;
+    color: black;
+    font-size: xx-large;
+    position: relative;
+    border-radius: 10px;
+
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.contact-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: greenyellow;
+    color: white;
+    transition: 1.0s;
+    z-index: -1;
+}
+
+.contact-btn:hover::before {
+    width: 100%;
+}
+
+.contact-btn:hover{
+    color:black;
+}
+.footer {
+    height: 50vh;
+   background-color:rgba(0, 0, 0, 0.966);
+}
+.footer ul{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+}
+footer i{
+    font-size: 40px;
+    color:white
+}
+
+
+
+.hero-txt h2{
+    color: white;
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.hero-txt h3{
+    color: orangered;
+    font-size: 35px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.hero-txt h2,
+.hero-txt h3{
+    text-shadow: 2px 2px 10px rgb(0, 0, 0);
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <!-- login section  -->
+    <div class="login-container" id="login-btn">
+        <form action="" class="form-bgcolor">
+            <div class="login-content">
+                <h1>Login form</h1>
+                <div class="btn-s">
+                    <button type="button" id="login-form">Login</button>
+                    <button type="button" onclick="showSignup()">Signup</button>
+                </div>
+                <div class="login-form">
+                    <!-- <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <a href="#" class="sign-a">Forgot password?</a>
+                    <button class="login-btn">Login</button> -->
+                    <input type="email" placeholder="Email" id="Lemail">
+                    <input type="password" placeholder="Password" id="Lpass">
+                    <a href="#">Forgot password?</a>
+                    <button class="login-btn" onclick="login()">Login</button>
+                    <p>Not a member? <a href="#" onclick="showSignup()"class="sign-a">Signup now</a></p>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- signup section -->
+    <div class="signup-container" id="signup-btn">
+        <form action="" class="form-bgcolor">
+            <div class="signup-content">
+                <h1>Signup form</h1>
+                <div class="btn-s">
+                    <button type="button" onclick="showLogin()">Login</button>
+                    <button type="button" id="signup-btn">Signup</button>
+                </div>
+                <div class="signup-form">
+                    <!-- <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <input type="password" placeholder="confirm-Password">
+                    <a href="#">Forgot password?</a>
+                    <button class="signup-btn">Login</button> -->
+                    <input type="text" placeholder="Name" id="Sname">
+                    <input type="email" placeholder="Email" id="Semail">
+                    <input type="password" placeholder="Password" id="Spass">
+                    <a href="#">Forgot password?</a>
+                    <button type="button" class="signup-btn" onclick="signup()">Sign-up</button>
+                    <p>Already have an accout? <a href="./signup.html" target="_blank" >Login</a></p>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        function showSignup() {
+            document.getElementById("login-btn").style.display = "none";
+            document.getElementById("signup-btn").style.display = "flex";
+        }
+        function showLogin() {
+            document.getElementById("login-btn").style.display = "flex";
+            document.getElementById("signup-btn").style.display = "none";
+        }
+    </script>
+    <script src="./login.js"></script>
+    <script src="./signup.js"></script>
+</body>
+</html>

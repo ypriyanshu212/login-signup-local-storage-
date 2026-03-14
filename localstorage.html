@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>sign up</h1>
+    <input type="text" id="name"><br><br>
+    <input type="email" id="email"><br><br>
+    <input type="password" id="pass"><br><br>
+    <button onclick="signup()">Signup</button>
+
+
+    <!-- login section  -->
+    <h1>login</h1>
+    <input type="email" id="email"><br><br>
+    <input type="password" id="pass"><br><br>
+    <button onclick="Login()">Login</button>
+    <script>
+        function signup() {
+            let Name = document.getElementById('name').value;
+            let Email = document.getElementById('email').value;
+            let Pass = document.getElementById('pass').value;
+            localStorage.setItem('username', Name);
+            localStorage.setItem('userEmail', Email);
+            localStorage.setItem('userPass', Pass);
+        }
+
+        function Login(){
+            let Email = document.getElementById('email').value;
+            let Pass = document.getElementById('pass').value;
+            REmail = localStorage.getItem('userEmail');
+            RPass = localStorage.getItem('userPass');
+            if(Email===REmail && Pass ===RPass){
+                alert("Login Successfully")
+            }
+            else{
+                alert("invalid creds")
+            }
+        }
+    </script>
+</body>
+
+</html>
